@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ChatBOT</title>
+    </head>
+    <body>
+        <h1>Pose ta question</h1>
+        <form method="post">
+            <input type="text" name="question" placeholder="Taper ici" value="{{question}}" style="width: 400px;" required>
+            <button type="submit">Envoyer</button>
+        </form>
+
+        {% if sql_result %}
+        <h2>SQL généré :</h2>
+        <pre>{{sql_result}}</pre>
+        {% endif %}
+
+        {% if error %}
+        <h2 style="color: red;">Erreur :</h2>
+        <p>{{error}}</p>
+        {% endif %}
+    </body>
+</html>
