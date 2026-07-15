@@ -2,3 +2,5 @@ mistralai
 python-dotenv
 psycopg2-binary
 flask
+chromadb
+requests
