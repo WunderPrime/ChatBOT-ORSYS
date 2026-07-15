@@ -1,0 +1,8 @@
+/Users/badr/Documents/chatbot/backend/src/main/java/com/agentassurance/backend/BackendApplication.java
+/Users/badr/Documents/chatbot/backend/src/main/java/com/agentassurance/backend/config/AppConfig.java
+/Users/badr/Documents/chatbot/backend/src/main/java/com/agentassurance/backend/controller/SqlController.java
+/Users/badr/Documents/chatbot/backend/src/main/java/com/agentassurance/backend/dto/AskResponse.java
+/Users/badr/Documents/chatbot/backend/src/main/java/com/agentassurance/backend/dto/PythonSqlResponse.java
+/Users/badr/Documents/chatbot/backend/src/main/java/com/agentassurance/backend/dto/QuestionRequest.java
+/Users/badr/Documents/chatbot/backend/src/main/java/com/agentassurance/backend/service/QueryExecutionService.java
+/Users/badr/Documents/chatbot/backend/src/main/java/com/agentassurance/backend/service/SqlGenerationService.java
