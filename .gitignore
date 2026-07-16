@@ -1,0 +1,21 @@
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+
+# ChromaDB (régénéré automatiquement au démarrage)
+chroma_data/
+
+# Spring Boot / Java
+backend/target/
+backend/.idea/
+backend/*.iml
+
+# Mac
+.DS_Store
+
+# VS Code
+.vscode/
+EOF
