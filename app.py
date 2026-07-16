@@ -1,10 +1,12 @@
 from flask import Flask, render_template, request, jsonify
-from schema import get_mock_schema
+from schema import get_mock_schema, get_schema_list
 from mistral_client import ask_mistral_for_sql, ask_mistral_to_explain
 from guardrails import is_sql_safe
+from vector_store import index_schema, retrieve_relevant_tables
 
 app = Flask(__name__)
 
+index_schema(get_schema_list())
 
 @app.route("/", methods=["GET"])
 def index():
@@ -19,7 +21,8 @@ def generate_sql_api():
     if not question:
         return jsonify({"error": "question manquante"}), 400
 
-    schema = get_mock_schema()
+    relevant_tables = retrieve_relevant_tables(question, top_k=3)
+    schema = "\n".join(relevant_tables)
     sql = ask_mistral_for_sql(schema, question)
 
     if is_sql_safe(sql):

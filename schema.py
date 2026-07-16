@@ -25,3 +25,13 @@ def get_schema(conn):
 def get_mock_schema():
     """Return a mock schema for testing"""
     return """users(id, name, email)"""
+
+def get_schema_list():
+    """Retourne chaque table comme un élément séparé de liste"""
+    return [
+        "users(id, name, email)",
+        "commandes(id, user_id, montant, date_commande)",
+        "produits(id, nom, prix, stock)",
+        "factures(id, commande_id, montant_ttc, date_facture)",
+        "reclamations(id, user_id, sujet, statut)",
+    ]
