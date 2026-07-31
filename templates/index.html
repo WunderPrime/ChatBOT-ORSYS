@@ -343,8 +343,7 @@
       <table>
         <thead><tr>${head}</tr></thead>
         <tbody>${rows}</tbody>
-      </table>
-      <div class="results-note">Données mock — PostgreSQL pas encore branché</div>`;
+      </table>`;
   }
 
   function renderResult(row, data) {
@@ -373,7 +372,7 @@
     const thinkingRow = addThinkingRow();
 
     try {
-      const res = await fetch('http://localhost:8080/api/ask', {
+      const res = await fetch('http://localhost:5001/api/agent-ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question })

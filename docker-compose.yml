@@ -7,3 +7,5 @@ services:
       - .env
     environment:
       - OLLAMA_URL=http://host.docker.internal:11434/api/embeddings
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - DB_HOST=host.docker.internal

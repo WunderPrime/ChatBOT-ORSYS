@@ -9,3 +9,4 @@ langchain-community
 langchain-mistralai
 langchain-chroma
 langchain-ollama
+flask-cors
